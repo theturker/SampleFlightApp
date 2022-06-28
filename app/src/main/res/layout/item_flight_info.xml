@@ -1,0 +1,140 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/radius_shadow"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginTop="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:id="@+id/ll_airlines"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_airlines_logo"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/thylogo"/>
+
+            <TextView
+                android:id="@+id/tv_airlines_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Türk Hava Yolları"
+                android:layout_marginStart="10dp"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_flight_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_airlines"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LOCATION" />
+
+            <TextView
+                android:id="@+id/tv_flight_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_toStartOf="@+id/tv_flight_money"
+                android:layout_toEndOf="@+id/tv_location"
+                android:text="SAAT"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tv_flight_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.449.99 TL"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                android:layout_toStartOf="@+id/iv_next"/>
+
+            <ImageView
+                android:id="@+id/iv_next"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_baseline_navigate_next_24" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/rl_flight_info"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_line"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/iv_below_btn"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:src="@drawable/icon_arrow_bg_gray" />
+
+            <TextView
+                android:id="@+id/tv_fly_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Direkt Uçuş"
+                android:textColor="@color/green"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/iv_below_btn"
+                android:layout_centerVertical="true"/>
+
+            <ImageView
+                android:id="@+id/ic_dot"
+                android:layout_width="3dp"
+                android:layout_height="3dp"
+                android:src="@drawable/gray_dot"
+                android:textColor="@color/green"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/tv_fly_type"
+                android:layout_centerVertical="true"/>
+
+            <ImageView
+                android:id="@+id/ic_bag"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/icon_baggage"
+                android:textColor="@color/green"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/ic_dot"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/tv_baggage_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20 kg/kişi"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/ic_bag"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
